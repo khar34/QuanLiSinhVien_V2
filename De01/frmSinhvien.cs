@@ -326,5 +326,10 @@ namespace De01
             BindGrid(studentService.GetAll());
             txtTimKiem.Clear();
         }
+
+        private void frmSinhvien_Click(object sender, EventArgs e)
+        {
+            ResetInput();
+        }
     }
 }

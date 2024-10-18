@@ -38,6 +38,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvSinhVien = new System.Windows.Forms.DataGridView();
+            this.cMaSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cTenSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnKhongLuu = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -47,10 +51,6 @@
             this.btnThoat = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTim = new System.Windows.Forms.Button();
-            this.cMaSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cTenSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnQuayLai = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSinhVien)).BeginInit();
@@ -160,6 +160,30 @@
             this.dgvSinhVien.TabIndex = 1;
             this.dgvSinhVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSinhVien_CellClick);
             // 
+            // cMaSV
+            // 
+            this.cMaSV.HeaderText = "Mã SV";
+            this.cMaSV.Name = "cMaSV";
+            this.cMaSV.ReadOnly = true;
+            // 
+            // cTenSV
+            // 
+            this.cTenSV.HeaderText = "Họ Tên SV";
+            this.cTenSV.Name = "cTenSV";
+            this.cTenSV.ReadOnly = true;
+            // 
+            // cNgaySinh
+            // 
+            this.cNgaySinh.HeaderText = "Ngày Sinh";
+            this.cNgaySinh.Name = "cNgaySinh";
+            this.cNgaySinh.ReadOnly = true;
+            // 
+            // cLop
+            // 
+            this.cLop.HeaderText = "Lớp";
+            this.cLop.Name = "cLop";
+            this.cLop.ReadOnly = true;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnKhongLuu);
@@ -250,30 +274,6 @@
             this.btnTim.UseVisualStyleBackColor = true;
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
-            // cMaSV
-            // 
-            this.cMaSV.HeaderText = "Mã SV";
-            this.cMaSV.Name = "cMaSV";
-            this.cMaSV.ReadOnly = true;
-            // 
-            // cTenSV
-            // 
-            this.cTenSV.HeaderText = "Họ Tên SV";
-            this.cTenSV.Name = "cTenSV";
-            this.cTenSV.ReadOnly = true;
-            // 
-            // cNgaySinh
-            // 
-            this.cNgaySinh.HeaderText = "Ngày Sinh";
-            this.cNgaySinh.Name = "cNgaySinh";
-            this.cNgaySinh.ReadOnly = true;
-            // 
-            // cLop
-            // 
-            this.cLop.HeaderText = "Lớp";
-            this.cLop.Name = "cLop";
-            this.cLop.ReadOnly = true;
-            // 
             // btnQuayLai
             // 
             this.btnQuayLai.Location = new System.Drawing.Point(222, 222);
@@ -300,6 +300,7 @@
             this.Text = "Quản lí sinh viên";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmSinhvien_FormClosing);
             this.Load += new System.EventHandler(this.frmSinhvien_Load);
+            this.Click += new System.EventHandler(this.frmSinhvien_Click);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSinhVien)).EndInit();
